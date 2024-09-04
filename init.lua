@@ -6,6 +6,7 @@ require("jarlsondre")
 
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.clipboard = "unnamed,unnamedplus"
 
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
@@ -20,3 +21,5 @@ vim.opt.colorcolumn = "88"
 -- Allow search terms to stay in the middle
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
+
+

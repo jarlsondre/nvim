@@ -1,12 +1,14 @@
-require("jarlsondre")
+require("config")
 
--- These are here to disable netrw... 
 -- vim.g.loaded_netrw = 1
 -- vim.g.loaded_netrwPlugin = 1
 
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.clipboard = "unnamed,unnamedplus"
+
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
 
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
@@ -21,5 +23,4 @@ vim.opt.colorcolumn = "88"
 -- Allow search terms to stay in the middle
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
-
 

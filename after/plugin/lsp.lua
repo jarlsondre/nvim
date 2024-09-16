@@ -1,5 +1,20 @@
 local lsp_zero = require("lsp-zero")
 
+
+-- Functionality for toggling diagnostics (inline errors etc.)
+local diagnostics_active = true
+local toggle_diagnostics = function()
+  diagnostics_active = not diagnostics_active
+  if diagnostics_active then
+    vim.diagnostic.enable()
+    print("Diagnostics enabled")
+  else
+    vim.diagnostic.disable()
+    print("Diagnostics disabled")
+  end
+end
+
+
 local lsp_attach = function(client, bufnr)
 	local opts = {buffer = bufnr}
 	vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>', opts)
@@ -14,6 +29,7 @@ local lsp_attach = function(client, bufnr)
 	vim.keymap.set('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
 	vim.keymap.set('n', '<leader>r', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
 	vim.keymap.set('n', '<leader>d', '<cmd>lua vim.diagnostic.open_float()<cr>', opts)
+	vim.keymap.set('n', '<leader>e', toggle_diagnostics)
 end
 
 lsp_zero.extend_lspconfig({

@@ -16,4 +16,4 @@ vim.keymap.set('n', '<leader>i', '7<C-w>+', { noremap = true })
 vim.keymap.set('n', '<leader>u', '7<C-w>-', { noremap = true })
  
 -- Swap window positions
-vim.keymap.set('n', '<leader>r', '<C-w>r', { noremap = true })
+vim.keymap.set('n', '<leader>s', '<C-w>r', { noremap = true })

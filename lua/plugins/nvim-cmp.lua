@@ -68,24 +68,19 @@ return { -- Autocompletion
           --  completions whenever it has completion options available.
           -- ['<C-Space>'] = cmp.mapping.complete {},
 
-					-- Manually close completion menu
-          -- ['<C-Space>'] = cmp.mapping.close {},
+					-- Toggle completion menu
 					['<C-g>'] = cmp.mapping({
 						i = function()
 							if cmp.visible() then
-								-- require("notify")("visible")
 								cmp.abort()
 							else
-								-- require("notify")("not visible")
 								cmp.complete()
 							end
 						end,
 						c = function()
 							if cmp.visible() then
-								-- require("notify")("visible")
 								cmp.close()
 							else
-								-- require("notify")("not visible")
 								cmp.complete()
 							end
 						end,

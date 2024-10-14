@@ -15,6 +15,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.expandtab = true
 vim.opt.smarttab = true
+vim.g.pyindent_open_paren = 0 
 
 vim.opt.breakindent = true
 vim.opt.updatetime = 250
